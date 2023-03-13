@@ -13,17 +13,9 @@ const middle = function(array) {
     number = ((array.length - 1) / 2);
     mid.push(array[number]);
   }
-  return mid;
+  return mid.toString();
 };
 
-console.log(middle([1]));
-console.log(middle([2]));
-
-console.log(middle([1, 2, 3, 4, 5, 6]));
-console.log(middle([0, 1, 2, 3]));
-
-console.log(middle([1, 2, 3, 4]));
-console.log(middle([1, 2, 3, 4, 5, 6]));
-
-console.log(middle([1, 2, 3, 4, 5]));
-console.log(middle([1, 2, 3]));
+const assertEqual = require('./assertEqual.js');
+assertEqual(middle([4,6,2,7]), '6,2');
+assertEqual(middle([2,4,6]), '4');
