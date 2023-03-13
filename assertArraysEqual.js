@@ -7,12 +7,6 @@ const eqArrays = function(test, outcome){
      }
      return check;
    }
-   const assertArraysEqual = function(output) {
-     if (output === true){
-        return console.log('Assertion passed');
-     }
-     if (output === false){
-        return console.log('Assertion failed');
-     }
- }
-    
+   const assertEqual = require('./assertEqual');
+   assertEqual(eqArrays([0, 2, 3], [0, 2, 3]),true);
+   assertEqual(eqArrays([1, 2, 4],[2, 5, 7]), false);
