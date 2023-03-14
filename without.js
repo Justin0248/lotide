@@ -16,4 +16,3 @@ while (v < source.length){
 }
 return create;
 }
-module.exports = without;
