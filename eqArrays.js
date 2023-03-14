@@ -8,4 +8,5 @@ check = false
     }
     return check;
   }
-  assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+
+  module.exports = eqArrays;

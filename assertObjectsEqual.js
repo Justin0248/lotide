@@ -27,26 +27,4 @@ const eqObjects = function(object1, object2) {
   return truth;
 };
 
-
-const assertObjectsEqual = function(actual, expected) {
-  const inspect = require('util').inspect;
-  if (eqObjects(actual, expected)) {
-    console.log(`Assertion passed, ${inspect(actual)} === ${inspect(expected)}`);
-  } else if (!eqObjects(actual, expected)) {
-    console.log(`Assertion failed, ${inspect(actual)} !== ${inspect(expected)}`);
-  }
-};
-
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-assertObjectsEqual(shirtObject, anotherShirtObject);
-
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-assertObjectsEqual(shirtObject, longSleeveShirtObject);
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject);
-
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-assertObjectsEqual(multiColorShirtObject, longSleeveMultiColorShirtObject);
+module.exports = eqObjects;

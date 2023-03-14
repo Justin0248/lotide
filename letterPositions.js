@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    return console.log(`Assertion Failed ${actual} != ${expected}`);
-  }
-  return console.log(`Assertion Passed ${actual} === ${expected}`);
-   
-};
-
 const letterPositions = function(sentence) {
   const results = {};
   let arr = [];
@@ -22,3 +14,4 @@ const letterPositions = function(sentence) {
   }
   return results;
 };
+module.exports = letterPositions;
